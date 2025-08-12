@@ -27,7 +27,7 @@ function operate(num1, num2, operator) {
   return result;
 }
 
-// Common function for calculation
+// Common function for calculation add, subtract, multiply and divide
 function add(num1, num2) {
   return num1 + num2;
 }

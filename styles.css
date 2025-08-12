@@ -1,0 +1,95 @@
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "digital-7";
+  src: url(./fonts/digital-7.ttf);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  width: 330px;
+  height: 600px;
+  border: 5px solid rgb(192, 192, 192);
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1rem;
+}
+.display {
+  height: 15vh;
+  font-size: 4rem;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-family: digital-7;
+  padding-bottom: 20px;
+}
+
+.button-container {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons {
+  width: 22%;
+  padding: 20px 0px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgb(59, 59, 59);
+}
+
+.buttons:hover {
+  background-color: rgb(91, 89, 89);
+}
+
+.btn-function {
+  background-color: rgb(140, 139, 139);
+}
+.btn-function:hover {
+  background-color: rgb(177, 177, 177);
+}
+
+.btn-sign {
+  background-color: rgb(255, 136, 0);
+}
+.btn-sign:hover {
+  background-color: rgb(255, 169, 71);
+}
+
+.btn-equals {
+  background-color: rgb(27, 165, 169);
+  flex-grow: 1;
+  border-radius: 20px;
+}
+.btn-equals:hover {
+  background-color: rgb(43, 209, 214);
+}
