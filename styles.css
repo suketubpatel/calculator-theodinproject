@@ -42,7 +42,7 @@ body {
 }
 .display {
   height: 15vh;
-  font-size: 4rem;
+  font-size: 3.8rem;
   display: flex;
   justify-content: end;
   align-items: end;
@@ -72,6 +72,10 @@ body {
   background-color: rgb(91, 89, 89);
 }
 
+.buttons:active {
+  transform: translateY(4px);
+  background-color: rgb(59, 59, 59);
+}
 .btn-function {
   background-color: rgb(140, 139, 139);
 }
