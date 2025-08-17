@@ -40,6 +40,7 @@ body {
   text-align: center;
   font-size: 1rem;
 }
+
 .display {
   height: 15vh;
   font-size: 3.8rem;
@@ -97,4 +98,15 @@ body {
 }
 .btn-equals:hover {
   background-color: rgb(43, 209, 214);
+}
+
+.button-ac-continer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-clear {
+  flex-grow: 1;
+  border-radius: 20px;
 }
