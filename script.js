@@ -16,6 +16,13 @@ let isFirstTime = true;
 
 let devideErrorMessage = "Error: Can't divide by ZERO!";
 
+btnContainer.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    clickPopulateDisplay(btn); // populate display
+    readSign(btn);
+  });
+});
+
 function clearAll() {
   // Clear display and reset variables
   (num1 = 0), (num2 = 0), (temp = 0), (operator = null), (sum = 0);
@@ -25,19 +32,6 @@ function clearAll() {
   periodIsUsed = false;
   isFirstTime = true;
 }
-
-btnContainer.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    clickPopulateDisplay(btn); // populate display
-    readSign(btn);
-
-    console.log("Operator: " + operator);
-    console.log("temp: " + temp);
-    console.log("num1: " + num1);
-    console.log("num2: " + num2);
-    console.log("sum: " + sum);
-  });
-});
 
 function digitPressed(btn) {
   // if digit pressed
@@ -95,8 +89,6 @@ function clickPopulateDisplay(btn) {
 
   temp = parseFloat(display.textContent);
   isNaN(temp) ? (temp = 0) : (temp = temp);
-
-  console.log("temp original: " + temp);
 }
 
 function readSign(btn) {
@@ -137,7 +129,6 @@ function readSign(btn) {
   }
 
   if (btn.classList.contains("btn-equals")) {
-    console.log("= clicked");
     if (isFirstTime) {
       num1 = temp;
       isFirstTime = false;
@@ -169,7 +160,7 @@ function updateDisplayFontSize(sign) {
   if (displayLength > 10) {
     if (sign === "+") {
       // decrise font size
-      console.log("devide by zero");
+
       newFontSize = newFontSize - sizeToUpdate;
       display.style.fontSize = newFontSize + "px";
     } else if (sign === "-") {
@@ -183,8 +174,7 @@ function updateDisplayFontSize(sign) {
 // Function to calculate numbers
 function operate(num01, num02, operator) {
   let result;
-  console.log("num01: " + num01);
-  console.log("num02: " + num02);
+
   switch (operator) {
     case "+":
       result = add(num01, num02);
